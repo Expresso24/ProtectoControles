@@ -34,30 +34,13 @@
           <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="rbtnElectronico" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="rbtnSoftware" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="132" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="lbCarrera" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="204" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="rbtnMecatronica" min="-2" max="-2" attributes="0"/>
-                          <Component id="rbtnIndustrial" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="199" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="rbtnElectronico" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbCarrera" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="rbtnMecatronica" min="-2" max="-2" attributes="0"/>
+                  <Component id="rbtnIndustrial" min="-2" max="-2" attributes="0"/>
+                  <Component id="rbtnSoftware" min="-2" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace min="204" pref="63" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="rbtnMatutino" min="-2" max="-2" attributes="0"/>
                   <Component id="rbtnVespertino" min="-2" max="-2" attributes="0"/>
@@ -72,14 +55,14 @@
                           <Component id="rbtnTarjeta" min="-2" max="-2" attributes="0"/>
                           <Component id="rbtnEfectivo" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="156" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="lblPrecio" min="-2" pref="111" max="-2" attributes="0"/>
                           <Component id="txtfldPrecioFinal" min="-2" pref="207" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="58" max="32767" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -134,16 +117,25 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="lbCarrera">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="sansserif" size="24" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Elige tu carrera"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblPago">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="sansserif" size="24" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Pago"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblTurno">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="sansserif" size="24" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Turno"/>
       </Properties>
     </Component>

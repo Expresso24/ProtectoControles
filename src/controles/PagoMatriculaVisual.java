@@ -41,10 +41,13 @@ public class PagoMatriculaVisual extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        lbCarrera.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
         lbCarrera.setText("Elige tu carrera");
 
+        lblPago.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
         lblPago.setText("Pago");
 
+        lblTurno.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
         lblTurno.setText("Turno");
 
         Carrera.add(rbtnSoftware);
@@ -131,22 +134,12 @@ public class PagoMatriculaVisual extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(rbtnElectronico)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(rbtnSoftware)
-                                .addGap(132, 132, 132)))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(lbCarrera)
-                            .addGap(204, 204, 204)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(rbtnMecatronica)
-                            .addComponent(rbtnIndustrial))
-                        .addGap(199, 199, 199)))
+                    .addComponent(rbtnElectronico)
+                    .addComponent(lbCarrera)
+                    .addComponent(rbtnMecatronica)
+                    .addComponent(rbtnIndustrial)
+                    .addComponent(rbtnSoftware))
+                .addGap(63, 63, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(rbtnMatutino)
                     .addComponent(rbtnVespertino)
@@ -159,12 +152,12 @@ public class PagoMatriculaVisual extends javax.swing.JFrame {
                             .addComponent(lblPago)
                             .addComponent(rbtnTarjeta)
                             .addComponent(rbtnEfectivo))
-                        .addContainerGap(156, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtfldPrecioFinal, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addGap(0, 58, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -228,7 +221,7 @@ public class PagoMatriculaVisual extends javax.swing.JFrame {
         carrera = "Industrial";
     }
 
-    // Obtener selección de turno
+    
     String turno = "";
     if (rbtnMatutino.isSelected()) {
         turno = "Matutino";
@@ -236,7 +229,7 @@ public class PagoMatriculaVisual extends javax.swing.JFrame {
         turno = "Vespertino";
     }
 
-    // Obtener selección de método de pago
+    
     String metodoPago = "";
     if (rbtnEfectivo.isSelected()) {
         metodoPago = "Efectivo";
@@ -244,17 +237,17 @@ public class PagoMatriculaVisual extends javax.swing.JFrame {
         metodoPago = "Tarjeta";
     }
 
-    // Validar que todas las opciones han sido seleccionadas
+    
     if (carrera.isEmpty() || turno.isEmpty() || metodoPago.isEmpty()) {
         JOptionPane.showMessageDialog(this, "Por favor selecciona todas las opciones", "Error", JOptionPane.ERROR_MESSAGE);
         return;
     }
 
-    // Crear instancia de PagoMatricula y calcular pago
+    
     PagoMatricula pago = new PagoMatricula(carrera, turno, metodoPago);
     double total = pago.calcularPago();
 
-    // Mostrar el total en el campo de texto
+    
     txtfldPrecioFinal.setText("Precio Final: $" + total);
         
     }//GEN-LAST:event_rbtnFinalizarActionPerformed

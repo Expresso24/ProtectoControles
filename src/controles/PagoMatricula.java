@@ -41,7 +41,7 @@ public class PagoMatricula {
             case "Vespertino":
                 return 250;
             default:
-                throw new IllegalArgumentException("Turno no válido");
+                return 1;
         }
     }
 
@@ -50,7 +50,7 @@ public class PagoMatricula {
         double total = subtotal + iva;
 
         if (metodoPago.equals("Tarjeta")) {
-            double comision = subtotal * 0.10;
+            double comision = total * 0.10;
             total += comision;
         }
 
